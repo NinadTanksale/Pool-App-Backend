@@ -9,7 +9,7 @@ const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
     origin: process.env.NODE_ENV === 'production' 
-      ? ["https://your-app-name.vercel.app"] 
+      ? ["https://pool-app-frontend.vercel.app", "https://pool-system-*.vercel.app", "https://*.vercel.app"] 
       : ["http://localhost:3000", "http://localhost:3001"],
     methods: ["GET", "POST"]
   }
